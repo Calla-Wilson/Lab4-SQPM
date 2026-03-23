@@ -3,7 +3,7 @@ package com.ontariotechu.sofe3980U;
 import java.io.FileReader;
 import java.util.List;
 import com.opencsv.*;
-import java.lang.Math;
+import java.util.logging.Logger;
 
 /**
  * Evaluate Single Variable Continuous Regression
@@ -12,7 +12,7 @@ public class App
 {
     // Small epsilon to avoid division by zero in MARE
     private static final double EPSILON = 1e-10;
-
+    Logger logger = Logger.getLogger(getClass().getName());
     public static void main( String[] args )
     {
         String[] modelFiles = {"model_1.csv", "model_2.csv", "model_3.csv"};
@@ -32,7 +32,7 @@ public class App
                 allData = csvReader.readAll();
                 csvReader.close();
             } catch (Exception e) {
-                System.out.println("Error reading the CSV file: " + filePath);
+                logger.info("Error reading the CSV file: " + filePath);
                 continue;
             }
 
@@ -61,16 +61,16 @@ public class App
             maeValues[m]  = mae;
             mareValues[m] = mare;
 
-            System.out.println("for " + filePath);
-            System.out.printf("\tMSE =%f\n",  mse);
-            System.out.printf("\tMAE =%f\n",  mae);
-            System.out.printf("\tMARE =%f\n", mare);
+            logger.info("for " + filePath);
+           logger.info("\tMSE =%f\n",  mse);
+            logger.info("\tMAE =%f\n",  mae);
+            logger.info("\tMARE =%f\n", mare);
         }
 
         // Recommend the best model for each metric (lowest value wins)
-        System.out.println("According to MSE, The best model is "  + bestModel(mseValues,  modelFiles));
-        System.out.println("According to MAE, The best model is "  + bestModel(maeValues,  modelFiles));
-        System.out.println("According to MARE, The best model is " + bestModel(mareValues, modelFiles));
+        logger.info("According to MSE, The best model is "  + bestModel(mseValues,  modelFiles));
+        logger.info("According to MAE, The best model is "  + bestModel(maeValues,  modelFiles));
+        logger.info("According to MARE, The best model is " + bestModel(mareValues, modelFiles));
     }
 
     /**
@@ -84,25 +84,5 @@ public class App
             }
         }
         return fileNames[bestIndex];
-    }
-
-    // -----------------------------------------------------------------------
-    // Kept for reference / unit testing — not used in main() above
-    // -----------------------------------------------------------------------
-
-    /** MSE for a single (y_true, y_predicted) pair */
-    static double MSE(double y_true, double y_predicted) {
-        double error = y_true - y_predicted;
-        return error * error;
-    }
-
-    /** MAE for a single (y_true, y_predicted) pair */
-    static double MAE(double y_true, double y_predicted) {
-        return Math.abs(y_true - y_predicted);
-    }
-
-    /** MARE for a single (y_true, y_predicted) pair */
-    static double MARE(double y_true, double y_predicted) {
-        return Math.abs(y_true - y_predicted) / (Math.abs(y_true) + EPSILON);
     }
 }
