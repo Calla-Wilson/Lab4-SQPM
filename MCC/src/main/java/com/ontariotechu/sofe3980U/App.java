@@ -1,7 +1,7 @@
 package com.ontariotechu.sofe3980U;
 
 
-import java.io.FileReader; 
+import java.io.FileReader;
 import java.util.List;
 import com.opencsv.*;
 
@@ -9,7 +9,7 @@ import com.opencsv.*;
  * Evaluate Single Variable Continuous Regression
  *
  */
-public class App 
+public class App
 {
     public static void main( String[] args )
     {
@@ -27,15 +27,15 @@ public class App
 		}
 		
 		int count=0;
-		float[] y_predicted=new float[5];
-		for (String[] row : allData) { 
-			int y_true=Integer.parseInt(row[0]);
-			System.out.print(y_true);
+		float[] yPredicted=new float[5];
+		for (String[] row : allData) {
+			int yTrue=Integer.parseInt(row[0]);
+			System.out.print(yTrue);
 			for(int i=0;i<5;i++){
-				y_predicted[i]=Float.parseFloat(row[i+1]);
-				System.out.print("  \t  "+y_predicted[i]); 
+				yPredicted[i]=Float.parseFloat(row[i+1]);
+				System.out.print("  \t  "+yPredicted[i]);
 			}
-			System.out.println(); 
+			System.out.println();
 			count++;
 			if (count==10){
 				break;
