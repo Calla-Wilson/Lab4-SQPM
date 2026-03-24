@@ -12,6 +12,7 @@ public class App
 {
     private static final double THRESHOLD = 0.5;
 
+
     public static void main( String[] args )
     {
         String[] modelFiles = {"model_1.csv", "model_2.csv", "model_3.csv"};
@@ -47,13 +48,14 @@ public class App
 
             //  Pass 1: BCE + confusion matrix 
             double bceSum = 0.0;
+            double epsilon = 1e-15; // To prevent log(0)
             int TP = 0, FP = 0, TN = 0, FN = 0;
 
             for (int i = 0; i < n; i++) {
                 yTrue[i] = Integer.parseInt(allData.get(i)[0].trim());
                 yPred[i] = Double.parseDouble(allData.get(i)[1].trim());
                 // BCE Binary Cross Entropy = -1/n * Σ [y*log(y^) + (1-y)*log(1-y^)]
-                bceSum = yTrue[i] * Math.log(yPred[i]) + (1 - yTrue[i]) * Math.log(1 - yPred[i]);
+                bceSum += yTrue[i] * Math.log(yPred[i]) + (1 - yTrue[i]) * Math.log(1 - yPred[i]);
 
                 // Confusion matrix at threshold = 0.5
                 int yHat = (yPred[i] >= THRESHOLD) ? 1 : 0;

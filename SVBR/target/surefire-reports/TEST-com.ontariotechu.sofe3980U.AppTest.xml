@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.ontariotechu.sofe3980U.AppTest" time="0.024" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.ontariotechu.sofe3980U.AppTest" time="0.022" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CA"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.11.9-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\Calla\AppData\Local\Temp\surefire592508887345776815\surefirebooter13663211362992742448.jar C:\Users\Calla\AppData\Local\Temp\surefire592508887345776815 2026-03-23T19-52-02_334-jvmRun1 surefire8221609951531277778tmp surefire_013470956505241583700tmp"/>
+    <property name="sun.java.command" value="C:\Users\Calla\AppData\Local\Temp\surefire7087713163495359237\surefirebooter8805453810474793032.jar C:\Users\Calla\AppData\Local\Temp\surefire7087713163495359237 2026-03-23T20-35-22_515-jvmRun1 surefire6155356549919973440tmp surefire_016426666025321028564tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Calla\Desktop\Github School files\SOFE3980U-Lab4\SVBR\target\test-classes;C:\Users\Calla\Desktop\Github School files\SOFE3980U-Lab4\SVBR\target\classes;C:\Users\Calla\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Calla\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Calla\.m2\repository\com\opencsv\opencsv\4.1\opencsv-4.1.jar;C:\Users\Calla\.m2\repository\org\apache\commons\commons-lang3\3.6\commons-lang3-3.6.jar;C:\Users\Calla\.m2\repository\org\apache\commons\commons-text\1.1\commons-text-1.1.jar;C:\Users\Calla\.m2\repository\commons-beanutils\commons-beanutils\1.9.3\commons-beanutils-1.9.3.jar;C:\Users\Calla\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Calla\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Calla\AppData\Local\Temp\surefire592508887345776815\surefirebooter13663211362992742448.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Calla\AppData\Local\Temp\surefire7087713163495359237\surefirebooter8805453810474793032.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.11+9"/>
